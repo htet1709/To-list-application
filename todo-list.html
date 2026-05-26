@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タスクリスト</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 400px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        h2 { margin-top: 0; color: #333; font-size: 1.5rem; }
+        h3 { font-size: 1rem; color: #666; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 25px; }
+        
+        .input-group {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+        }
+        button#add-btn {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button#add-btn:hover { background-color: #357abd; }
+
+        ul { list-style: none; padding: 0; margin: 0; }
+        li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            margin-bottom: 5px;
+            border-radius: 6px;
+        }
+        .todo-text { flex-grow: 1; margin-left: 10px; transition: 0.3s; }
+        
+        /* 完了セクションのスタイル */
+        #completed-list .todo-text {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #ffbaba;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+        .delete-btn:hover { color: #ff4d4f; }
+
+        input[type="checkbox"] { transform: scale(1.2); cursor: pointer; }
+    </style>  
+</head>
+<body>
+    <div class="container">
+        <h1>タスクリスト</h1>
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="新しいタスクを追加...">
+            <button id="add-btn">追加</button>
+        </div>
+
+        <h3>進行中のタスク</h3>
+        <ul id="active-list"></ul>
+
+        <h3>完了したタスク</h3>
+        <ul id="completed-list"></ul>
+    </div>
+
+    <script >
+        const input = document.getElementById('todo-input');
+        const addBtn = document.getElementById('add-btn');
+        const activeList = document.getElementById('active-list');
+        const completedList = document.getElementById('completed-list');
+
+        // 起動時にLocalStorageからデータを読み込む
+        let tasks = JSON.parse(localStorage.getItem('myTasks')) || [];
+
+        function saveAndRender() {
+            localStorage.setItem('myTasks', JSON.stringify(tasks));
+            render();
+        }
+
+        function render() {
+            activeList.innerHTML = '';
+            completedList.innerHTML = '';
+
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = task.completed;
+                checkbox.onclick = () => toggleTask(index);
+
+                const span = document.createElement('span');
+                span.className = 'todo-text';
+                span.textContent = task.text;
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'delete-btn';
+                deleteBtn.innerHTML = '&#128465;';
+                deleteBtn.onclick = () => deleteTask(index);
+
+                li.append(checkbox, span, deleteBtn);
+
+                if (task.completed) {
+                    completedList.appendChild(li);
+                } else {
+                    activeList.appendChild(li);
+                }
+            });
+        }
+
+        function addTask() {
+            const text = input.value.trim();
+            if (!text) return;
+            tasks.push({ text: text, completed: false });
+            input.value = '';
+            saveAndRender();
+        }
+
+        function toggleTask(index) {
+            tasks[index].completed = !tasks[index].completed;
+            saveAndRender();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            saveAndRender();
+        }
+
+        addBtn.addEventListener('click', addTask);
+        input.addEventListener('keypress', (e) => { if (e.key === 'Enter') addTask(); });
+
+        // 初期レンダリング
+        render();
+
+
+        
+    </script>
+</body>
+</html>
