@@ -1,9 +1,35 @@
 # 📝 To-Do List Web Application
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[English](#english) | [日本語](#japanese)
+
+---
+
+<a name="english"></a>
+## 🇬🇧 English
+
+A clean, responsive To-Do List web application designed to help you organize daily tasks efficiently.
+
+🌐 **Live Demo:** [todo-list-v125.netlify.app](https://todo-list-v125.netlify.app/)
+
+
+### 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Hosting / Deployment:** Netlify
+
+
+### ✨ Key Features
+- **Task Management:** Easily create, mark as completed, and delete tasks.
+- **Data Persistence:** Automatically saves your tasks to `localStorage` so data remains safe even after refreshing or closing the browser.
+- **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.
+- **Fast & Lightweight:** Built using pure HTML, CSS, and JavaScript with no external framework overhead.
+
+### 🔮 Future Improvements
+- [ ] **Category Organization:** Divide tasks into distinct categories to keep work organized.
+- [ ] **Due Dates & Priority Levels:** Set deadlines and priority flags for urgent tasks.
+- [ ] **Dark Mode Support:** Toggle between Light and Dark themes.
+
+---
+# 📝 To-Do List Web Application
 
 [English](#english) | [日本語](#japanese)
 
@@ -16,30 +42,41 @@ A clean, responsive To-Do List web application designed to help you organize dai
 
 🌐 **Live Demo:** [todo-list-v125.netlify.app](https://todo-list-v125.netlify.app/)
 
+### 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Hosting / Deployment:** Netlify
+
 ### ✨ Key Features
 - **Task Management:** Easily create, mark as completed, and delete tasks.
 - **Data Persistence:** Automatically saves your tasks to `localStorage` so data remains safe even after refreshing or closing the browser.
 - **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.
-- **Fast & Lightweight:** Built using pure HTML, CSS, and Vanilla JavaScript with no external framework overhead.
+- **Fast & Lightweight:** Built using pure HTML, CSS, and JavaScript with no external framework overhead.
 
 ### 🔮 Future Improvements
 - [ ] **Category Organization:** Divide tasks into distinct categories to keep work organized.
-- [ ] **Task Filtering:** Filter tasks by status (All, Active, Completed).
 - [ ] **Due Dates & Priority Levels:** Set deadlines and priority flags for urgent tasks.
 - [ ] **Dark Mode Support:** Toggle between Light and Dark themes.
-- [ ] **Drag & Drop:** Reorder tasks easily using drag-and-drop interactions.
-
-### 🛠️ Tech Stack
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+)
-- **Hosting / Deployment:** Netlify
 
 ---
 
-### 🚀 Getting Started
+<a name="japanese"></a>
+## 🇯🇵 日本語
 
-#### Installation & Local Setup
+日常のタスクを効率的に整理・管理できる、シンプルでレスポンシブなTo-DoリストWebアプリケーションです。
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/To-list-application.git](https://github.com/your-username/To-list-application.git)
-   cd To-list-application
+🌐 **ライブデモ:** [todo-list-v125.netlify.app](https://todo-list-v125.netlify.app/)
+
+### 🛠️ 使用技術 (Tech Stack)
+- **フロントエンド:** HTML5, CSS3, JavaScript (ES6+)
+- **ホスティング / デプロイ:** Netlify
+
+### ✨ 主な機能
+- **タスク管理:** タスクの追加、完了チェック、削除を直感的に操作可能。
+- **データの永続化:** `localStorage` を使用し、ページ更新やブラウザを閉じてもデータを保持。
+- **レスポンシブ対応:** PC、タブレット、スマートフォン等、あらゆるデバイスに最適化。
+- **高速＆軽量:** 外部ライブラリやフレームワークを使わず、ピュアな HTML、CSS、JavaScript のみで構築。
+
+### 🔮 今後改善したい点 (Future Improvements)
+- [ ] **カテゴリ分け機能:** タスクをカテゴリごとに分類して整理整頓する機能。
+- [ ] **期日・優先度設定:** 重要なタスクに締め切り日時や優先度フラグを設定する機能。
+- [ ] **ダークモード対応:** ライトモードとダークモードの切り替え機能。
