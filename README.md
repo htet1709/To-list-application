@@ -11,37 +11,6 @@ A clean, responsive To-Do List web application designed to help you organize dai
 
 🌐 **Live Demo:** [todo-list-v125.netlify.app](https://todo-list-v125.netlify.app/)
 
-
-### 🛠️ Tech Stack
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Hosting / Deployment:** Netlify
-
-
-### ✨ Key Features
-- **Task Management:** Easily create, mark as completed, and delete tasks.
-- **Data Persistence:** Automatically saves your tasks to `localStorage` so data remains safe even after refreshing or closing the browser.
-- **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.
-- **Fast & Lightweight:** Built using pure HTML, CSS, and JavaScript with no external framework overhead.
-
-### 🔮 Future Improvements
-- [ ] **Category Organization:** Divide tasks into distinct categories to keep work organized.
-- [ ] **Due Dates & Priority Levels:** Set deadlines and priority flags for urgent tasks.
-- [ ] **Dark Mode Support:** Toggle between Light and Dark themes.
-
----
-# 📝 To-Do List Web Application
-
-[English](#english) | [日本語](#japanese)
-
----
-
-<a name="english"></a>
-## 🇬🇧 English
-
-A clean, responsive To-Do List web application designed to help you organize daily tasks efficiently.
-
-🌐 **Live Demo:** [todo-list-v125.netlify.app](https://todo-list-v125.netlify.app/)
-
 ### 🛠️ Tech Stack
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 - **Hosting / Deployment:** Netlify
